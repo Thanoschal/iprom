@@ -1,0 +1,10 @@
+ {
+    "mysql":{
+        "host":"localhost",
+        "user":"thanos",
+        "passwd":"6371",
+        "db":"lemnos_db",
+        "port":"3306",
+        "pool_size":"10"
+    }
+}
