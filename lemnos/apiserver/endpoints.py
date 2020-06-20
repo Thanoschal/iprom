@@ -5,11 +5,29 @@ import mysql.connector
 from functions import *
 
 #endpoints
-#returns the weather forecast in json format
-@app.route('/forecast')
-def forecast():
+#returns the weather forecast in json format greek
+@app.route('/forecast_gr')
+def forecast_gr():
 
     url = "http://api.openweathermap.org/data/2.5/forecast?lat=39.9142&lon=25.2266&units=metric&appid=6f7bc0ea27da33c6bb4decaa26bdaa71&lang=el"
+
+    response = requests.request("GET", url)
+    
+    data = json.loads(response.text)
+    
+    for d in data['list']:
+        d['wind']['speed'] = speedtobf(int(d['wind']['speed']))
+        d['wind']['deg'] = degreestocompass(int(d['wind']['deg']))
+    
+    json_final = json.dumps(data)
+    
+    return json_final
+
+#returns the weather forecast in json format greek
+@app.route('/forecast_eng')
+def forecast_eng():
+
+    url = "http://api.openweathermap.org/data/2.5/forecast?lat=39.9142&lon=25.2266&units=metric&appid=6f7bc0ea27da33c6bb4decaa26bdaa71"
 
     response = requests.request("GET", url)
     
