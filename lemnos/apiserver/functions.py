@@ -1,6 +1,28 @@
 
 #conversion from degrees to compass direction
-def degreestocompass(deg):
+def degreestocompass_gr(deg):
+    if deg < 45:
+        return "Βόρεια"
+    elif deg < 90:
+        return "Ανατολικά"
+    elif deg < 135:
+        return "Ανατολικά"
+    elif deg < 180:
+        return "Νότια"
+    elif deg < 225:
+        return "Νότια"
+    elif deg < 270:
+        return "Δυτικά"
+    elif deg < 315:
+        return "Δυτικά"
+    elif deg <= 360:
+        return "Βόρεια"
+    else:
+        return "Μη Διαθέσιμο"
+
+
+#conversion from degrees to compass direction
+def degreestocompass_eng(deg):
     if deg < 45:
         return "North"
     elif deg < 90:

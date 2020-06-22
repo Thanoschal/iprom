@@ -8,38 +8,56 @@ from functions import *
 #returns the weather forecast in json format greek
 @app.route('/forecast_gr')
 def forecast_gr():
+    
+    json_final = ""
+    
+    try:
+        url = "http://api.openweathermap.org/data/2.5/forecast?lat=39.9142&lon=25.2266&units=metric&appid=6f7bc0ea27da33c6bb4decaa26bdaa71&lang=el"
 
-    url = "http://api.openweathermap.org/data/2.5/forecast?lat=39.9142&lon=25.2266&units=metric&appid=6f7bc0ea27da33c6bb4decaa26bdaa71&lang=el"
-
-    response = requests.request("GET", url)
+        response = requests.request("GET", url)
+        
+        data = json.loads(response.text)
+        
+        
+        for d in data['list']:
+            d['wind']['speed'] = speedtobf(int(d['wind']['speed']))
+            d['wind']['deg'] = degreestocompass_gr(int(d['wind']['deg']))
+        
+        json_final = json.dumps(data)
     
-    data = json.loads(response.text)
-    
-    for d in data['list']:
-        d['wind']['speed'] = speedtobf(int(d['wind']['speed']))
-        d['wind']['deg'] = degreestocompass(int(d['wind']['deg']))
-    
-    json_final = json.dumps(data)
-    
-    return json_final
+    except:
+        json_final = "{ \"message\": \"Error\" }"
+        
+        return json_final , 503
+          
+    return json_final , 200
 
 #returns the weather forecast in json format greek
 @app.route('/forecast_eng')
 def forecast_eng():
 
-    url = "http://api.openweathermap.org/data/2.5/forecast?lat=39.9142&lon=25.2266&units=metric&appid=6f7bc0ea27da33c6bb4decaa26bdaa71"
+    json_final = ""
+    
+    try:
+    
+        url = "http://api.openweathermap.org/data/2.5/forecast?lat=39.9142&lon=25.2266&units=metric&appid=6f7bc0ea27da33c6bb4decaa26bdaa71"
 
-    response = requests.request("GET", url)
-    
-    data = json.loads(response.text)
-    
-    for d in data['list']:
-        d['wind']['speed'] = speedtobf(int(d['wind']['speed']))
-        d['wind']['deg'] = degreestocompass(int(d['wind']['deg']))
-    
-    json_final = json.dumps(data)
-    
-    return json_final
+        response = requests.request("GET", url)
+        
+        data = json.loads(response.text)
+        
+        for d in data['list']:
+            d['wind']['speed'] = speedtobf(int(d['wind']['speed']))
+            d['wind']['deg'] = degreestocompass_eng(int(d['wind']['deg']))
+        
+        json_final = json.dumps(data)
+        
+    except:
+        json_final = "{ \"message\": \"Error\" }"
+        
+        return json_final , 503
+        
+    return json_final , 200
 
 #returns the weather forecast in json format
 @app.route('/beaches')
