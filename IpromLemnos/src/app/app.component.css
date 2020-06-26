@@ -1,0 +1,63 @@
+body {
+  background-color: #b3cce2;
+  background-size: cover;
+  height: 100%;
+  font-family: "Arial";
+}
+
+.logo {
+  width: 10em;
+  height: 4em;
+  z-index: 10;
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+div.polaroid {
+  width: fit-content;
+  background-color: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+}
+
+div.container {
+  text-align: center;
+  padding: 10px 20px;
+  border-radius: 10px;
+
+}
+
+.image_body {
+  background: rgba(37, 63, 86, 0.9);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  height: 10em;
+  width: 25em;
+
+}
+
+.image_body_small {
+  background: rgba(37, 63, 86, 0.7);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  height: 5em;
+  width: 18em;
+
+
+}
+
+p {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 1px;
+}
