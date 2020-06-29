@@ -6,8 +6,8 @@ import {WeatherResponse} from './weather';
 
 @Injectable({providedIn: 'root'})
 export class HttpService {
-  // BaseUrl = 'http://localhost:5000/';
-  BaseUrl = 'http://192.168.2.6:5000/';
+  BaseUrl = 'http://localhost:5000/';
+  // BaseUrl = 'http://192.168.2.6:5000/';
 
   constructor(private http: HttpClient) {}
 

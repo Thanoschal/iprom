@@ -5,6 +5,7 @@ import { CarouselModule, WavesModule, CardsModule } from 'angular-bootstrap-md';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule, HttpClient } from '@angular/common/http';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { HttpClientModule, HttpClient } from '@angular/common/http';
     CarouselModule,
     WavesModule,
     BrowserModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    NgbModule
   ],
   providers: [HttpClient],
   bootstrap: [AppComponent]

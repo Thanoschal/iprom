@@ -452,7 +452,7 @@
 
           <div class="col-3" *ngIf="errorHttp == true">
 
-            <mdb-card style="margin-top: 50%; z-index: 1; width: 18em; height: 13em; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.3); border-radius: 10px">
+            <mdb-card style="margin-top: 50%; z-index: 1; width: 18em; height: 14em; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.3); border-radius: 10px">
               <mdb-card-body class="image_body_small">
                 <h1 style="color: aliceblue">Oops!</h1>
 
@@ -637,7 +637,7 @@
 
                 <div class="row">
                   <div class="col-8">
-                    <h3 style="font-size: 18px; color: #60707a; text-align: left">Κατεύθυνση Ανέμου:</h3>
+                    <h3 style="font-size: 18px; color: #60707a; text-align: left">Κατεύθυνση ανέμου:</h3>
                   </div>
                   <div class="col-4" style="text-align: right">
                     <h3 style="font-size: 18px; color: #60707a;text-align: right">{{next_days_weather_gr[3].wind.deg}}</h3>
@@ -706,18 +706,38 @@
           <div class="col-12 justify-content-center" style="text-align: center;" >
             <h1 class="text-center" style="font-size: 20px; text-align: center; font-family: Arial; color: #253f56" *ngIf="lang=='gr'">{{title_beaches_gr}}</h1>
             <h1 class="text-center" style="font-size: 20px; text-align: center; font-family: Arial; color: #253f56" *ngIf="lang=='en'">{{title_beaches_en}}</h1>
-          <mdb-carousel class="carousel slide carousel-fade" [animation]="'fade'" [isControls]="false" style="width:100%;">
-            <mdb-carousel-item *ngFor="let beach of forecast_beaches; let i = index" style="border-radius: 10px;">
-              <div class="polaroid">
-                <img src={{forecast_beaches_images[i]}} [alt]="forecast_beaches_images[i]" style="width:82em; height: 30em; border-top-left-radius: 10px; border-top-right-radius: 10px;">
-                <div class="container">
-                  <p style="font-size: 18px">{{beach.name_gr+": "+ beach.description_gr}}</p>
-                  <p style="font-size: 18px">{{beach.name_eng+": "+beach.description_eng}} </p>
+<!--          <mdb-carousel class="carousel slide carousel-fade" [animation]="'fade'" [isControls]="false" style="width:100%;">-->
+<!--            <mdb-carousel-item *ngFor="let beach of forecast_beaches; let i = index" style="border-radius: 10px;">-->
+<!--              <div class="polaroid">-->
+<!--                <img src={{forecast_beaches_images[i]}} [alt]="forecast_beaches_images[i]" style="width:82em; height: 30em; border-top-left-radius: 10px; border-top-right-radius: 10px;">-->
+<!--                <div class="container">-->
+<!--                  <p style="font-size: 18px">{{beach.name_gr+": "+ beach.description_gr}}</p>-->
+<!--                  <p style="font-size: 18px">{{beach.name_eng+": "+beach.description_eng}} </p>-->
+<!--                </div>-->
+<!--              </div>-->
+<!--            </mdb-carousel-item>-->
+<!--          </mdb-carousel>-->
+
+            <ngb-carousel [showNavigationArrows]="false" [showNavigationIndicators]="false">
+              <ng-template ngbSlide *ngFor="let beach of forecast_beaches; let i = index" style="border-radius: 10px;">
+                <div class="picsum-img-wrapper">
+                 <div class="polaroid">
+
+                  <img src={{forecast_beaches_images[i]}} [alt]="forecast_beaches_images[i]" style="width:82em; height: 30em; border-top-left-radius: 10px; border-top-right-radius: 10px;">
+                  <div class="container">
+                    <p style="font-size: 18px">{{beach.name_gr+": "+ beach.description_gr}}</p>
+                    <p style="font-size: 18px">{{beach.name_eng+": "+beach.description_eng}} </p>
+                  </div>
+                 </div>
                 </div>
-              </div>
-            </mdb-carousel-item>
-          </mdb-carousel>
-        </div>
+<!--                <div class="carousel-caption">-->
+<!--                  <h3>No mouse navigation</h3>-->
+<!--                  <p>This carousel hides navigation arrows and indicators.</p>-->
+<!--                </div>-->
+              </ng-template>
+            </ngb-carousel>
+
+          </div>
       </div>
       </div>
     </div>

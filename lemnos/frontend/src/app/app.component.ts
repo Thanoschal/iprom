@@ -45,28 +45,28 @@ export class AppComponent implements OnInit{
     "Πεμπτη 00:45 11:00",
     "Παρασκευή* 22:00 12:45",
     "Κυριακή 20:45 07:00"
-  ]
+  ];
 
   dromologia_laurio_en = [
     "Tuesday 12:45 22:40",
     "Thursday 00:45 11:00",
     "Friday* 22:00 12:45",
     "Sunday 20:45 07:00"
-  ]
+  ];
 
   dromologia_from_laurio_gr = [
     "Δευτέρα 12:30 23:15",
     "Τετάρτη 01:00 11:30",
     "Πέμπτη 21:00 07:15",
     "Σάββατο* 16:00 07:00"
-  ]
+  ];
 
   dromologia_from_laurio_en = [
     "Monday 12:30 23:15",
     "Wednesday 01:00 11:30",
     "Thursday 21:00 07:15",
     "Saturday* 16:00 07:00"
-  ]
+  ];
 
   dromologia_kavala_gr = [
     "Τρίτη 00:30 04:45",
@@ -76,7 +76,7 @@ export class AppComponent implements OnInit{
     "Παρασκευή 08:30 13:00",
     "Σάββατο 18:55 22:05",
     "Κυριακή 08:30 13:00"
-  ]
+  ];
 
 
   dromologia_from_kavala_gr = [
@@ -87,7 +87,7 @@ export class AppComponent implements OnInit{
     "Παρασκευή 16:00 20:45",
     "Kυριακή 09:00 12:05",
     "Κυριακή 15:00 19:30"
-  ]
+  ];
 
   dromologia_kavala_en = [
     "Tuesday 00:30 04:45",
@@ -97,7 +97,7 @@ export class AppComponent implements OnInit{
     "Friday 08:30 13:00",
     "Saturday 18:55 22:05",
     "Sunday 08:30 13:00"
-  ]
+  ];
   dromologia_from_kavala_en = [
     "Tuesday 07:30 11:30",
     "Tuesday 15:00 18:05",
@@ -106,90 +106,90 @@ export class AppComponent implements OnInit{
     "Friday 16:00 20:45",
     "Sunday 09:00 12:05",
     "Sunday 15:00 19:30"
-  ]
+  ];
 
   dromologia_samothraki_gr = [
     "Δευτέρα 07:00 09:50",
     "Τρίτη 15:30 18:20",
     "Τετάρτη 13:00 15:50",
-  ]
+  ];
 
   dromologia_samothraki_en = [
     "Monday 07:00 09:50",
     "Tuesday 15:30 20:30",
     "Wednesday 13:00 18:30",
-  ]
+  ];
 
   dromologia_alexamdroupoli_gr = [
     "Δευτέρα 07:00 12:20",
     "Τρίτη 15:30 18:20",
     "Τετάρτη 13:00 15:50",
-  ]
+  ];
 
   dromologia_alexamdroupoli_en = [
     "Monday 07:00 12:20",
     "Tuesday 15:30 18:20",
     "Wednesday 13:00 15:50",
-  ]
+  ];
 
   dromologia_eustratios_gr = [
     "Τρίτη 12:45 14:15",
     "Πέμπτη 00:45 02:15",
     "Παρασκευή 22:00 23:30",
     "Κυριακή 12:25 16:40",
-  ]
+  ];
 
   dromologia_eustratios_en = [
     "Tuesday 12:45 14:15",
     "Thursday 00:45 02:15",
     "Friday 22:00 23:30",
     "Sunday 12:25 16:40",
-  ]
+  ];
 
   dromologia_mytilini_gr = [
     "Τρίτη 18:25 22:30",
     "Πέμπτη 20:25 00:30",
     "Κυριακή 12:25 16:30",
-  ]
+  ];
 
   dromologia_mytilini_en = [
     "Tuesday 18:25 22:30",
     "Thursday 20:25 00:30",
     "Sunday 12:25 16:30",
-  ]
+  ];
 
   dromologia_xios_gr = [
     "Τρίτη 18:25 01:25",
     "Πέμπτη 20:25 03:45",
     "Παρασκευή 22:00 -",
     "Κυριακή 12:25 19:30",
-  ]
+  ];
 
   dromologia_xios_en = [
     "Tuesday 18:25 01:25",
     "Thursday 20:25 03:45",
     "Friday 22:00 -",
     "Sunday 12:25 19:30",
-  ]
+  ];
 
   dromologia_samos_gr = [
     "Τρίτη 18:25 -",
     "Πέμπτη 20:25 -",
     "Κυριακή 12:25 -",
-  ]
+  ];
 
   dromologia_samos_en = [
     "Tuesday 18:25 -",
     "Thursday 20:25 -",
     "Sunday 12:25 -",
-  ]
+  ];
 
   dromologia_total = [this.dromologia_peiraias_gr, this.dromologia_laurio_gr, this.dromologia_from_laurio_gr, this.dromologia_kavala_gr,
     this.dromologia_from_kavala_gr, this.dromologia_samothraki_gr,
     this.dromologia_alexamdroupoli_gr, this.dromologia_eustratios_gr, this.dromologia_mytilini_gr, this.dromologia_xios_gr, this.dromologia_samos_gr,
     this.dromologia_peiraias_en, this.dromologia_laurio_en, this.dromologia_from_laurio_en, this.dromologia_kavala_en, this.dromologia_from_kavala_en,
     this.dromologia_samothraki_en,
-    this.dromologia_alexamdroupoli_en, this.dromologia_eustratios_en, this.dromologia_mytilini_en, this.dromologia_xios_en, this.dromologia_samos_en]
+    this.dromologia_alexamdroupoli_en, this.dromologia_eustratios_en, this.dromologia_mytilini_en, this.dromologia_xios_en, this.dromologia_samos_en];
 
   constructor(private httpService: HttpService) { }
 
@@ -271,7 +271,7 @@ export class AppComponent implements OnInit{
   forecastBeaches() {
 
     if(Number(this.weather.list[0].dt_txt.split(' ')[1].split(':')[0]) > 20) {
-      this.title_beaches_gr = 'Προτεινόμενες παραλίες για αύριο σύμφωνα με την κατευθυνση και την ένταση του Ανέμου';
+      this.title_beaches_gr = 'Προτεινόμενες παραλίες για αύριο σύμφωνα με την κατευθυνση και την ένταση του ανέμου';
       this.title_beaches_en = 'Recommended beaches for tomorrow based on the direction and the speed of wind';
 
       let cur_pos = 0;
@@ -281,6 +281,7 @@ export class AppComponent implements OnInit{
         curr_time = this.weather.list[cur_pos].dt_txt.split('-')[2].split(' ')[1].split(':')[0];
       }
 
+      console.log("empty data");
       //empty forecast data
       while (this.forecast_beaches.length != 0) {
         this.forecast_beaches.pop();
@@ -318,7 +319,7 @@ export class AppComponent implements OnInit{
     }
     else {
 
-      this.title_beaches_gr = 'Προτεινόμενες παραλίες για σήμερα σύμφωνα με την κατευθυνση και την ένταση του Ανέμου';
+      this.title_beaches_gr = 'Προτεινόμενες παραλίες για σήμερα σύμφωνα με την κατευθυνση και την ένταση του ανέμου';
       this.title_beaches_en = 'Recommended beaches for today based on the direction and the speed of wind';
 
       //empty forecast data
